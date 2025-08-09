@@ -1,0 +1,48 @@
+/* NavLinks.css */
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  position: relative;
+  padding-left: 1.25rem; /* 留出圓點空間 */
+  text-decoration: none;
+  color: #444;
+  font-weight: normal;
+  transition: color 0.1s ease, font-weight 0.1s ease;
+}
+
+/* ⭕ 前方圓點 */
+.nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #444;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+/* 👉 滑鼠滑過 */
+.nav-link:hover {
+  color: #111;
+  font-weight: 800;
+}
+
+/* 🌟 滾動到該區塊時（active） */
+.nav-link.active {
+  color: #111;
+  font-weight: 800;
+}

@@ -1,0 +1,15 @@
+/* Sidebar.css */
+.sidebar {
+  position: fixed;
+  top: 2em;
+  left: 2em;
+  width: 12rem;
+  height: 100vh;
+  padding: 1.5rem;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  overflow-y: auto;
+  background-color: transparent;
+}

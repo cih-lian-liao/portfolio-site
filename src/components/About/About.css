@@ -1,0 +1,76 @@
+/* About.css */
+.about {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.about__profile {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.about__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 9999px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about__name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  color: #111;
+}
+
+.about__tagline {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.about__details {
+  text-align: left;
+}
+
+.about__section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+/* 🔍 Tooltip styles */
+.about__name-tooltip {
+  position: relative;
+  cursor: url("https://cdn-icons-png.flaticon.com/16/833/833472.png"), auto;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  z-index: 999;
+}
+
+.about__name-tooltip:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
