@@ -9,6 +9,7 @@ import Certifications from "./components/Certifications/Certifications";
 import BeyondCode from "./components/BeyondCode/BeyondCode";
 import Resume from "./components/Resume/Resume";
 import Contact from "./components/Contact/Contact";
+import LilyGPT from "./components/LilyGPT/LilyGPT";
 import "./App.css";
 
 const SECTIONS = [
@@ -18,39 +19,39 @@ const SECTIONS = [
   "education",
   "certifications",
   "beyond-code",
-  "resume",
   "contact",
+  "resume",
+  "lily-gpt",
 ];
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
 
-  // ✅ 在第一次載入時重設 scroll 和 hash（避免瀏覽器自動跳到其他區塊）
+  // ✅ 首次載入時重設 scroll/hash，避免直接跳到中間區塊
   useEffect(() => {
     if (window.location.hash) {
-      // 清除 hash 並跳到頂部
       window.scrollTo(0, 0);
       window.history.replaceState(null, "", "#about");
     }
   }, []);
 
-  // ✅ 使用 IntersectionObserver 更新 active section
+  // ✅ 使用 IntersectionObserver 更新 active section（提前切換 + 底部留緩衝）
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        const visibleSections = entries.filter((entry) => entry.isIntersecting);
-        if (visibleSections.length > 0) {
-          const mostVisible = visibleSections.sort(
+        const visible = entries.filter((e) => e.isIntersecting);
+        if (visible.length > 0) {
+          const mostVisible = visible.sort(
             (a, b) => b.intersectionRatio - a.intersectionRatio
           )[0];
-
           const id = mostVisible.target.id;
           setActiveSection(id);
           window.history.replaceState(null, "", `#${id}`);
         }
       },
       {
-        threshold: 0.2, // 可以根據實際需求微調
+        rootMargin: "-70% 0px -10% 0px", // 提早切換、底部保留 10% 緩衝
+        threshold: 0.01,                  // 需有 1% 進入觀察區，避免短節點閃爍
       }
     );
 
@@ -60,6 +61,23 @@ function App() {
     });
 
     return () => observer.disconnect();
+  }, []);
+
+  // ✅ 保險：滑到最底直接鎖定最後一節（解決極端情況）
+  useEffect(() => {
+    function handleBottomLock() {
+      const nearBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 1;
+      if (nearBottom) {
+        const last = SECTIONS[SECTIONS.length - 1]; // 'lily-gpt'
+        setActiveSection(last);
+        window.history.replaceState(null, "", `#${last}`);
+      }
+    }
+
+    window.addEventListener("scroll", handleBottomLock, { passive: true });
+    return () => window.removeEventListener("scroll", handleBottomLock);
   }, []);
 
   return (
@@ -84,11 +102,14 @@ function App() {
         <section id="beyond-code">
           <BeyondCode />
         </section>
+        <section id="contact">
+          <Contact />
+        </section>
         <section id="resume">
           <Resume />
         </section>
-        <section id="contact">
-          <Contact />
+        <section id="lily-gpt">
+          <LilyGPT />
         </section>
       </main>
     </div>

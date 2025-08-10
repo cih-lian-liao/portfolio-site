@@ -9,6 +9,7 @@ const sections = [
   { id: "beyond-code", label: "beyond code" },
   { id: "contact", label: "contact" },
   { id: "resume", label: "resume" },
+  { id: "lily-gpt", label: "lilyGPT" },
 ];
 
 export default function NavLinks({ active }) {

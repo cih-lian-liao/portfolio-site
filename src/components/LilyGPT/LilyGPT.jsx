@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function Resume() {
+export default function LilyGPT() {
   return (
     <div>
       <div
         style={{
           height: "100vh",
-          backgroundColor: "#cbb4cbff",
+          backgroundColor: "#fd9cfaff",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -14,7 +14,7 @@ export default function Resume() {
           border: "1px dashed #66bb6a",
         }}
       >
-        resume area
+        lily gpt
       </div>
     </div>
   )
