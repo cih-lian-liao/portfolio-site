@@ -1,9 +1,11 @@
-/* About.css */
+
+
 .about {
-  padding: 4rem 2rem;
+  padding-top: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 .about__profile {
@@ -73,4 +75,10 @@
 .about__name-tooltip:hover .tooltip {
   opacity: 1;
   visibility: visible;
+}
+
+@reference "tailwindcss";
+
+.divider {
+  @apply my-10 border-t border-gray-300 dark:border-gray-700;
 }

@@ -1,0 +1,51 @@
+@reference "tailwindcss";
+
+.skills-section {
+  padding-top: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 800px;
+  line-height: 1.2;
+}
+
+.skills-container {
+  @apply max-w-6xl mx-auto px-4;
+}
+.skills-h2 {
+  @apply text-2xl font-bold text-gray-900 dark:text-white mb-10;
+}
+
+.skill-block {
+  @apply mb-8;
+}
+.skill-title {
+  @apply text-2xl font-semibold text-gray-900 dark:text-white mb-4;
+}
+.skill-list {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700 dark:text-gray-300 list-disc list-inside;
+}
+
+.beliefs {
+  @apply mt-12;
+}
+
+.beliefs-title {
+  @apply text-2xl font-semibold text-gray-900 dark:text-white mb-4;
+}
+
+.beliefs-list {
+  @apply list-decimal list-outside space-y-3 leading-relaxed text-gray-700 dark:text-gray-300 pl-6;
+}
+
+.skill-list {
+  @apply grid grid-cols-1 gap-2 text-gray-700 dark:text-gray-300 list-disc list-inside;
+}
+
+/* 單獨讓數字編號加粗 */
+.beliefs-list li::marker {
+  font-weight: 700; /* Tailwind 的 font-bold 對應值 */
+}
+
+.divider {
+  @apply my-10 border-t border-gray-300 dark:border-gray-700;
+}

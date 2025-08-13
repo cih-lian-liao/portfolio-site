@@ -1,4 +1,3 @@
-// About.jsx
 import "./About.css";
 import profileAvatar from "./profile.jpg";
 
@@ -38,6 +37,7 @@ export default function About() {
           AI technologies to solve meaningful problems.
         </p>
       </div>
+      <div className="divider"></div>
     </div>
   );
 }
