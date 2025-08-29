@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
-import Projects from "./components/Projects/Projects";
+import Projects from "./components/Projects/Projects.jsx";
 import Education from "./components/Education/Education";
 import Certifications from "./components/Certifications/Certifications";
 import BeyondCode from "./components/BeyondCode/BeyondCode";
