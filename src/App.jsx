@@ -5,7 +5,7 @@ import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects.jsx";
 import Education from "./components/Education/Education";
-import Certifications from "./components/Certifications/Certifications";
+import Experience from "./components/Experience/Experience.jsx";
 import BeyondCode from "./components/BeyondCode/BeyondCode";
 import Resume from "./components/Resume/Resume";
 import Contact from "./components/Contact/Contact";
@@ -17,7 +17,7 @@ const SECTIONS = [
   "skills",
   "projects",
   "education",
-  "certifications",
+  "experience",
   "beyond-code",
   "contact",
   "resume",
@@ -96,8 +96,8 @@ function App() {
         <section id="education">
           <Education />
         </section>
-        <section id="certifications">
-          <Certifications />
+        <section id="experience">
+          <Experience />
         </section>
         <section id="beyond-code">
           <BeyondCode />

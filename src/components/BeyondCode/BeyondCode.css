@@ -1,0 +1,46 @@
+.beliefs {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+}
+
+.beliefs-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #111;
+  text-align: center;
+}
+
+.beliefs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: decimal; /* 顯示數字編號 */
+  padding-left: 1.5rem;
+}
+
+.beliefs-list li {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-left: 3px solid transparent;
+  border-radius: 6px;
+  color: #666;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+}
+
+.beliefs-list li:hover {
+  background: #f9f9f9;
+  border-left: 3px solid #111;
+}
+
+.beliefs-closing {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  color: #444;
+}

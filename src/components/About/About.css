@@ -1,74 +1,91 @@
-
-
 .about {
-  padding-top: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  line-height: 1.5;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #222;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .about__profile {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
 }
 
 .about__avatar {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 9999px;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.about__avatar:hover {
+  transform: scale(1.05);
 }
 
 .about__name {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  margin: 1rem 0;
   color: #111;
+  margin-bottom: 0.5rem;
 }
 
 .about__tagline {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
-  color: #555;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.about__tagline:hover {
+  color: #000;
 }
 
 .about__details {
   text-align: left;
+  margin: 0 auto;
+  max-width: 680px;
+  line-height: 1.7;
 }
 
 .about__section-title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  color: #222;
+  color: #111;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
-/* 🔍 Tooltip styles */
+.about__section-p {
+    text-align: center;
+}
+
+/* Tooltip */
 .about__name-tooltip {
   position: relative;
-  cursor: url("https://cdn-icons-png.flaticon.com/16/833/833472.png"), auto;
+  cursor: help;
   display: inline-block;
 }
 
 .tooltip {
   position: absolute;
-  bottom: 120%;
+  bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #222;
+  background-color: #111;
   color: #fff;
-  padding: 0.3rem 0.6rem;
+  padding: 0.4rem 0.7rem;
   border-radius: 4px;
-  font-size: 0.8rem;
-  white-space: nowrap;
+  font-size: 0.75rem;
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease-in-out;
-  z-index: 999;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .about__name-tooltip:hover .tooltip {
@@ -76,8 +93,86 @@
   visibility: visible;
 }
 
-@reference "tailwindcss";
-
+/* Divider */
 .divider {
-  @apply my-10 border-t border-gray-300 dark:border-gray-700;
+  margin: 3rem auto;
+  border-top: 1px solid #ccc;
+  width: 60%;
+  transition: all 0.3s ease;
+}
+
+.divider:hover {
+  border-image: linear-gradient(to right, #333, #999, #333) 1;
+}
+
+
+.ask-btn {
+  display: inline-block;
+  padding: 0.6rem 1.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #111;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 9999px; /* pill 圓角 */
+  text-decoration: none;
+  font-weight: 500;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.ask-btn:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.about__cta {
+  margin-top: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.about__cta-text {
+  font-size: 1.3rem;
+  color: #111;
+  font-weight: 600;
+
+}
+
+.ask-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.6rem;
+  background: #f5f5f5;
+  color: #111;
+  border: 1px solid #ddd;
+  border-radius: 9999px; /* pill-style */
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ask-btn:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.ask-icon {
+  font-size: 1.2rem;
+}
+
+.about__cta-subtext {
+  font-size: 0.9rem;
+  color: #777;
+  
 }

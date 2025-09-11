@@ -1,50 +1,43 @@
 @reference "tailwindcss";
 
 .skills-section {
-  padding-top: 0;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  line-height: 1.2;
+  @apply py-16 bg-gray-50 dark:bg-gray-900;
 }
 
 .skills-container {
-  @apply max-w-6xl mx-auto px-4;
+  @apply max-w-6xl mx-auto px-4 text-center;
 }
+
 .skills-h2 {
-  @apply text-2xl font-bold text-gray-900 dark:text-white mb-10;
+  @apply text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center;
 }
 
 .skill-block {
-  @apply mb-8;
+  @apply mb-12;
 }
+
 .skill-title {
-  @apply text-2xl font-semibold text-gray-900 dark:text-white mb-4;
-}
-.skill-list {
-  @apply grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700 dark:text-gray-300 list-disc list-inside;
+  @apply text-xl font-semibold text-gray-800 dark:text-gray-100 mb-6 text-center;
 }
 
-.beliefs {
-  @apply mt-12;
+.skill-grid {
+  @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4;
 }
 
-.beliefs-title {
-  @apply text-2xl font-semibold text-gray-900 dark:text-white mb-4;
+.skill-card {
+  @apply w-full min-h-[40px] flex items-center justify-center 
+         rounded-2xl border border-gray-200/60 dark:border-gray-700/60
+         bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900
+         text-gray-700 dark:text-gray-200 font-medium tracking-wide
+         shadow-sm hover:shadow-xl
+         transition-all duration-300 ease-in-out;
 }
 
-.beliefs-list {
-  @apply list-decimal list-outside space-y-3 leading-relaxed text-gray-700 dark:text-gray-300 pl-6;
-}
-
-.skill-list {
-  @apply grid grid-cols-1 gap-2 text-gray-700 dark:text-gray-300 list-disc list-inside;
-}
-
-/* 單獨讓數字編號加粗 */
-.beliefs-list li::marker {
-  font-weight: 700; /* Tailwind 的 font-bold 對應值 */
+.skill-card:hover {
+  @apply -translate-y-1 scale-105 text-gray-900 dark:text-white;
+  /* 黑色文字 (亮色模式) & 白色文字 (暗色模式) */
 }
 
 .divider {
-  @apply my-10 border-t border-gray-300 dark:border-gray-700;
+  @apply my-12 border-t border-gray-300 dark:border-gray-700;
 }
