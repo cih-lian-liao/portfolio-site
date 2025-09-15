@@ -19,82 +19,55 @@ export default function Resume() {
   };
 
   return (
-    <section id="resume" className="bg-gray-50 py-16 px-6">
-      <div className="max-w-4xl mx-auto">
+    <section id="resume" className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-6">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            📄 Resume
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-700 rounded-full mb-6 shadow-lg">
+            <FaFilePdf className="text-white text-2xl" />
+          </div>
+          <h2 className="text-4xl font-semibold text-gray-800 mb-4 tracking-wide">
+            Resume
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            <button
-              onClick={handleDownload}
-              className="text-blue-600 hover:text-blue-800 underline"
-            >
-              Download
-            </button>
-            {' '}or{' '}
-            <button
-              onClick={handleViewPDF}
-              className="text-blue-600 hover:text-blue-800 underline"
-            >
-              view in new tab
-            </button>
-            {' '}my complete resume with detailed information about my education, experience, skills, and projects.
-          </p>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex justify-center gap-6 mb-16">
+          <button
+            onClick={handleDownload}
+            className="group flex items-center gap-3 px-8 py-4 bg-gray-700 text-white rounded-xl font-medium transition-all duration-500 hover:bg-gray-600 hover:scale-102 hover:shadow-lg"
+          >
+            <FaDownload className="text-lg" />
+            <span>Download PDF</span>
+          </button>
+          <button
+            onClick={handleViewPDF}
+            className="group flex items-center gap-3 px-8 py-4 bg-white text-gray-700 border-2 border-gray-300 rounded-xl font-medium transition-all duration-500 hover:bg-gray-50 hover:border-gray-400 hover:scale-102 hover:shadow-lg"
+          >
+            <FaEye className="text-lg" />
+            <span>View Online</span>
+          </button>
         </div>
 
         {/* Resume Preview Card */}
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-          {/* PDF Embed or Preview */}
-          <div className="p-6">
-            <div className="bg-gray-100 rounded-lg overflow-hidden">
-              {/* PDF Embed */}
-              <iframe
-                src={`${resumePDF}#toolbar=0&navpanes=0&scrollbar=0`}
-                width="100%"
-                height="600"
-                title="Resume PDF"
-                className="border-0"
-                style={{ minHeight: '600px' }}
-              />
-            </div>
-          </div>
-
-          {/* Resume Highlights */}
-          <div className="bg-gray-50 p-8 border-t">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">📋 Resume Highlights</h3>
-              <p className="text-gray-600">
-                Key qualifications and experience overview
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h5 className="font-medium text-gray-800 mb-2">🎓 Education</h5>
-                <p className="text-gray-600 text-sm">
-                  Master of Science in Information Systems<br />
-                  Northeastern University, Seattle
-                </p>
+        <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-200">
+          {/* PDF Embed */}
+          <div className="relative">
+            <div className="bg-gray-800 p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
               </div>
-              <div>
-                <h5 className="font-medium text-gray-800 mb-2">💼 Experience</h5>
-                <p className="text-gray-600 text-sm">
-                  Translator, Interpreter & Project Coordinator<br />
-                  2019 - 2023
-                </p>
-              </div>
-              <div>
-                <h5 className="font-medium text-gray-800 mb-2">🛠️ Skills</h5>
-                <p className="text-gray-600 text-sm">
-                  React, JavaScript, Python, Java, Node.js, MongoDB
-                </p>
-              </div>
-              <div>
-                <h5 className="font-medium text-gray-800 mb-2">🚀 Projects</h5>
-                <p className="text-gray-600 text-sm">
-                  E-commerce Apps, Analytics Dashboards, AI Integration
-                </p>
+              <div className="bg-gray-100 rounded-xl overflow-hidden shadow-inner">
+                <iframe
+                  src={`${resumePDF}#toolbar=0&navpanes=0&scrollbar=0`}
+                  width="100%"
+                  height="800"
+                  title="Resume PDF"
+                  className="border-0"
+                  style={{ minHeight: '800px' }}
+                />
               </div>
             </div>
           </div>
