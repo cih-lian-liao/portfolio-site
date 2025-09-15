@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaDownload, FaEye, FaFilePdf, FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaDownload, FaEye, FaFilePdf } from 'react-icons/fa';
 import resumePDF from '../../assets/Cihlian-Liao-Resume.pdf';
 
 export default function Resume() {
@@ -97,45 +97,6 @@ export default function Resume() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Contact Section */}
-        <div className="mt-12 bg-white rounded-xl shadow-lg p-8">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">📩 Get in Touch</h3>
-            <p className="text-gray-600">
-              Seattle · Open for Summer 2026 internships · Interested in working together?
-            </p>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex justify-center gap-8">
-            <a
-              href="mailto:athena83922@gmail.com"
-              className="flex items-center gap-2 text-gray-700 hover:text-black transition"
-            >
-              <FaEnvelope className="text-xl" />
-              <span>Email</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/cihlianliao"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition"
-            >
-              <FaLinkedin className="text-xl" />
-              <span>LinkedIn</span>
-            </a>
-            <a
-              href="https://github.com/cih-lian-liao"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition"
-            >
-              <FaGithub className="text-xl" />
-              <span>GitHub</span>
-            </a>
           </div>
         </div>
       </div>

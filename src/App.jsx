@@ -19,9 +19,9 @@ const SECTIONS = [
   "education",
   "experience",
   "beyond-code",
-  "contact",
   "resume",
   "lily-gpt",
+  "contact",
 ];
 
 function App() {
@@ -70,7 +70,7 @@ function App() {
         window.innerHeight + window.scrollY >=
         document.documentElement.scrollHeight - 1;
       if (nearBottom) {
-        const last = SECTIONS[SECTIONS.length - 1]; // 'lily-gpt'
+        const last = SECTIONS[SECTIONS.length - 1]; // 'contact'
         setActiveSection(last);
         window.history.replaceState(null, "", `#${last}`);
       }
@@ -102,14 +102,14 @@ function App() {
         <section id="beyond-code">
           <BeyondCode />
         </section>
-        <section id="contact">
-          <Contact />
-        </section>
         <section id="resume">
           <Resume />
         </section>
         <section id="lily-gpt">
           <LilyGPT />
+        </section>
+        <section id="contact">
+          <Contact />
         </section>
       </main>
     </div>

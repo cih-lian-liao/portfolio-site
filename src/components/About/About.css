@@ -157,6 +157,7 @@
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
+  animation: breathe 2s ease-in-out infinite;
 }
 
 .ask-btn:hover {
@@ -175,4 +176,16 @@
   font-size: 0.9rem;
   color: #777;
   
+}
+
+/* 呼吸動畫 */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+  }
 }

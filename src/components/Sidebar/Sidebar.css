@@ -2,7 +2,7 @@
 .sidebar {
   position: fixed;
   top: 2em;
-  left: 2em;
+  left: calc(50vw - min(40vw, 400px) - 12rem); /* 計算 main-content 左邊界，考慮 max-width 限制 */
   width: 12rem;
   height: 100vh;
   padding: 1.5rem;

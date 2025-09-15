@@ -8,11 +8,12 @@ html {
   width: 100vw;
   display: flex;
   font-size: 1em;
+  justify-content: center;
 }
 
 .main-content {
   width: 80vw;
-  margin-left: 20%;
+  max-width: 800px; /* 與 sections 保持一致的最大寬度 */
   padding-bottom: 40vh; /* ✅ 底部緩衝，確保最後一節能進入觀察帶 */
 }
 
@@ -21,8 +22,7 @@ section {
   min-height: 60vh;
   padding: 0;
   box-sizing: border-box;
-  max-width: 800px;
-  
+  width: 100%; /* 使用 main-content 的完整寬度 */
 }
 
 

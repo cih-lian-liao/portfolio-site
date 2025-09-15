@@ -1,15 +1,15 @@
 import "./NavLinks.css";
 
 const sections = [
-  { id: "about", label: "about" },
-  { id: "skills", label: "skills" },
-  { id: "projects", label: "projects" },
-  { id: "education", label: "education" },
-  { id: "experience", label: "experience" },
-  { id: "beyond-code", label: "beyond code" },
-  { id: "contact", label: "contact" },
-  { id: "resume", label: "resume" },
-  { id: "lily-gpt", label: "lilyGPT" },
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "education", label: "Education" },
+  { id: "experience", label: "Experience" },
+  { id: "beyond-code", label: "Beyond Code" },
+  { id: "resume", label: "Resume" },
+  { id: "lily-gpt", label: "LilyGPT" },
+  { id: "contact", label: "Contact" },
 ];
 
 export default function NavLinks({ active }) {
