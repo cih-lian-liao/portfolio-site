@@ -130,11 +130,19 @@
   justify-content: center;
   gap: 3rem;
   flex-wrap: wrap;
-  padding: 1.5rem;
+  padding: 1em;
   background: white;
   border-radius: 1.5rem;
   border: 1px solid #e5e7eb;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem; /* 桌面版留較小間距 */
+}
+
+/* 在 1250px 以下，為底部導航預留較大空間 */
+@media (max-width: 1250px) {
+  .contact-footer {
+    margin-bottom: calc(8rem + env(safe-area-inset-bottom));
+  }
 }
 
 .contact-info-item {

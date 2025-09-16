@@ -1,0 +1,28 @@
+/* Resume responsive PDF embed */
+.resume-embed {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+/* Small to medium screens: keep A4 portrait ratio (width:height ≈ 1:1.414) */
+@media (max-width: 1250px) {
+  .resume-embed {
+    aspect-ratio: 1 / 1.414;
+  }
+}
+
+/* Large screens: fixed comfortable height */
+@media (min-width: 1251px) {
+  .resume-embed {
+    height: 900px;
+  }
+}
+
+.resume-embed iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #ffffff; /* ensure viewer background is white */
+  border: 0;
+}

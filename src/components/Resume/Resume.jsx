@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaDownload, FaEye, FaFilePdf } from 'react-icons/fa';
 import resumePDF from '../../assets/Cihlian-Liao-Resume.pdf';
+import './Resume.css';
 
 export default function Resume() {
 
@@ -35,7 +36,7 @@ export default function Resume() {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex justify-center gap-6 mb-16">
+        <div className="flex justify-center gap-6 mb-8">
           <button
             onClick={handleDownload}
             className="group flex items-center gap-3 px-8 py-4 bg-gray-700 text-white rounded-xl font-medium transition-all duration-500 hover:bg-gray-600 hover:scale-102 hover:shadow-lg"
@@ -56,20 +57,20 @@ export default function Resume() {
         <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-200">
           {/* PDF Embed */}
           <div className="relative">
-            <div className="bg-gray-800 p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-              </div>
-              <div className="bg-gray-100 rounded-xl overflow-hidden shadow-inner">
+            <div className="bg-white p-6">
+              <div className="resume-embed">
                 <iframe
-                  src={`${resumePDF}#toolbar=0&navpanes=0&scrollbar=0`}
-                  width="100%"
-                  height="800"
+                  src={`${resumePDF}#zoom=page-width&view=FitH&toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0`}
                   title="Resume PDF"
                   className="border-0"
-                  style={{ minHeight: '800px' }}
+                  style={{ 
+                    backgroundColor: '#ffffff',
+                    border: 'none !important',
+                    outline: 'none !important',
+                    boxShadow: 'none !important',
+                    borderWidth: '0 !important',
+                    borderStyle: 'none !important'
+                  }}
                 />
               </div>
             </div>
