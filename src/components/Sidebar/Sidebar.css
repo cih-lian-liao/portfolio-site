@@ -1,10 +1,10 @@
 /* Sidebar.css */
 .sidebar {
   position: fixed;
-  top: 2em;
+  top: 50%;
   left: calc(50vw - min(40vw, 400px) - 14rem);
   width: 14rem;
-  height: calc(100vh - 4em);
+  height: auto;
   padding: 0;
   box-shadow: none;
   display: flex;
@@ -13,13 +13,13 @@
   overflow-y: auto;
   background-color: transparent;
   gap: 1rem;
+  transform: translateY(-50%);
 }
 
 .sidebar-controls {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  margin-top: auto;
 }
 
 /* Responsive Design */
