@@ -3,50 +3,77 @@ import profileAvatar from "./profile.jpg";
 
 export default function About() {
   return (
-    <section className="about">
-      <div className="about__profile">
-        <img
-          src={profileAvatar}
-          alt="Lily Liao profile"
-          className="about__avatar"
-        />
-        <h1 className="about__name">
-          <span className="about__name-tooltip">
-            Cihlian
-            <span className="tooltip">pronunciation: chi-lian</span>
-          </span>{" "}
-          Lily Liao
-        </h1>
-        <h2 className="about__tagline">
-          Front-End Developer · UX Enthusiast · AI Explorer
-        </h2>
-      </div>
+    <section id="about" className="bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-6 min-h-screen flex items-center">
+      <div className="max-w-5xl mx-auto">
+        {/* Header */}
+        <div className="about-header">
+          <div className="about-avatar-wrapper">
+            <img 
+              alt="Lily Liao profile" 
+              className="about-avatar" 
+              src={profileAvatar}
+            />
+          </div>
+          <h2 className="about-title">
+            <span className="about-name-tooltip">
+              Cihlian
+              <span className="about-tooltip-text">pronunciation: chi-lian</span>
+            </span>
+            {" "}
+            Lily Liao
+          </h2>
+          <div className="about-tagline-container">
+            <span className="about-tagline-item">Front-End Developer</span>
+            <span className="about-tagline-item">UX Enthusiast</span>
+            <span className="about-tagline-item">AI Explorer</span>
+          </div>
+          <div className="about-divider"></div>
+        </div>
 
-      <div className="about__details">
-        <h3 className="about__section-title">✨ A little bit more about me</h3>
-        <p className="about__section-p">
-          I’m currently pursuing a Master’s degree in Information Systems at
-          Northeastern University, Seattle. With a deep passion for technology
-          and design, I aim to build web applications that are not only
-          functional but also beautiful and user-centered.
-        </p>
-        <p className="about__section-p">
-          I have a unique background in language and translation, which helps me
-          communicate clearly and build inclusive digital experiences. I’m
-          especially interested in combining front-end development with emerging
-          AI technologies to solve meaningful problems.
-        </p>
+        {/* Main Content Card */}
+        <div className="about-main-card">
+          {/* About Content Section */}
+          <div className="about-content">
+            <div className="about-content-header">
+              <div className="about-content-icon">
+                <span className="text-2xl">👋</span>
+              </div>
+              <h3 className="about-content-title">A little bit more about me</h3>
+            </div>
+            
+            <div className="about-content-text">
+              <p>
+                I'm currently pursuing a Master's degree in Information Systems at
+                Northeastern University, Seattle. With a deep passion for technology
+                and design, I aim to build web applications that are not only
+                functional but also beautiful and user-centered.
+              </p>
+              <p>
+                I have a unique background in language and translation, which helps me
+                communicate clearly and build inclusive digital experiences. I'm
+                especially interested in combining front-end development with emerging
+                AI technologies to solve meaningful problems.
+              </p>
+            </div>
+          </div>
+        </div>
 
-        {/* ✅ 新增這裡 */}
-        <p className="about__cta">
-          <span className="about__cta-text"> ✨ You can ask anything more about me at</span>
-          <a href="#lily-gpt" className="ask-btn">
-            <span className="ask-icon">🤖</span>LilyGPT
+        {/* Call to Action Card */}
+        <div className="about-cta-card">
+          <div className="about-cta-header">
+            <div className="about-cta-icon">
+              <span className="text-2xl">👋</span>
+            </div>
+            <p className="about-cta-text">
+              You can ask anything more about me at
+            </p>
+          </div>
+          <a href="#lily-gpt" className="about-cta-button">
+            <span className="about-button-icon">🤖</span>
+            <span>LilyGPT</span>
           </a>
-        </p>
+        </div>
       </div>
-
-      <div className="divider"></div>
     </section>
   );
 }

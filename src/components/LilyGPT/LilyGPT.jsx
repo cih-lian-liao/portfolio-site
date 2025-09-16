@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { FaPaperPlane, FaRobot, FaUser, FaSpinner } from 'react-icons/fa';
+import { FaPaperPlane, FaRobot, FaUser, FaSpinner, FaLightbulb } from 'react-icons/fa';
+import "./LilyGPT.css";
 
 export default function LilyGPT() {
   const [messages, setMessages] = useState([
@@ -13,14 +14,29 @@ export default function LilyGPT() {
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
+  const chatMessagesRef = useRef(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      if (chatMessagesRef.current) {
+        chatMessagesRef.current.scrollTop = chatMessagesRef.current.scrollHeight;
+      }
+    }, 100);
   };
 
   useEffect(() => {
-    scrollToBottom();
+    // 只在有新消息時滾動，並且延遲一點時間確保 DOM 更新完成
+    if (messages.length > 1) {
+      scrollToBottom();
+    }
   }, [messages]);
+
+  // 當加載狀態改變時也滾動
+  useEffect(() => {
+    if (!isLoading && messages.length > 1) {
+      scrollToBottom();
+    }
+  }, [isLoading]);
 
   const sendMessage = async (e) => {
     e.preventDefault();
@@ -88,47 +104,50 @@ export default function LilyGPT() {
   };
 
   return (
-    <section id="lilygpt" className="bg-gradient-to-br from-purple-50 to-pink-50 py-16 px-6">
-      <div className="max-w-4xl mx-auto">
+    <section id="lily-gpt" className="bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-6">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            🤖 Ask LilyGPT
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-700 rounded-full mb-6 shadow-lg">
+            <span className="text-white text-2xl">🤖</span>
+          </div>
+          <h2 className="text-4xl font-semibold text-gray-800 mb-4 tracking-wide">
+            LilyGPT
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Have questions about Lily? Chat with my AI assistant to learn about her skills, 
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Have other questions about me? Chat with my AI assistant <br />to learn about my skills, 
             projects, experience, and background!
           </p>
+          <div className="w-40 h-0.5 bg-gray-400 mx-auto rounded-full mt-6"></div>
         </div>
 
         {/* Chat Container */}
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div className="chat-container">
+          {/* Chat Header */}
+          <div className="chat-header">
+            <div className="chat-avatar">
+              <span className="text-xl">🤖</span>
+            </div>
+            <div className="chat-info">
+              <h3 className="chat-title">LilyGPT Assistant</h3>
+              <p className="chat-status">Online • Ready to help</p>
+            </div>
+          </div>
+
           {/* Chat Messages */}
-          <div className="h-96 overflow-y-auto p-6 space-y-4">
+          <div className="chat-messages" ref={chatMessagesRef}>
             {messages.map((message) => (
               <div
                 key={message.id}
-                className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+                className={`message-wrapper ${message.sender === 'user' ? 'user-message' : 'ai-message'}`}
               >
-                <div className={`flex items-start gap-3 max-w-xs lg:max-w-md ${
-                  message.sender === 'user' ? 'flex-row-reverse' : 'flex-row'
-                }`}>
-                  <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                    message.sender === 'user' 
-                      ? 'bg-blue-500 text-white' 
-                      : 'bg-purple-500 text-white'
-                  }`}>
-                    {message.sender === 'user' ? <FaUser size={14} /> : <FaRobot size={14} />}
+                <div className="message-content">
+                  <div className="message-avatar">
+                    {message.sender === 'user' ? <FaUser size={16} /> : <FaRobot size={16} />}
                   </div>
-                  <div className={`rounded-lg p-3 ${
-                    message.sender === 'user'
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-gray-100 text-gray-900'
-                  }`}>
-                    <p className="text-sm whitespace-pre-wrap">{message.text}</p>
-                    <p className={`text-xs mt-1 ${
-                      message.sender === 'user' ? 'text-blue-100' : 'text-gray-500'
-                    }`}>
+                  <div className={`message-bubble ${message.sender === 'user' ? 'user-bubble' : 'ai-bubble'}`}>
+                    <p className="message-text">{message.text}</p>
+                    <p className="message-time">
                       {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                     </p>
                   </div>
@@ -138,15 +157,15 @@ export default function LilyGPT() {
             
             {/* Loading indicator */}
             {isLoading && (
-              <div className="flex justify-start">
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-500 text-white flex items-center justify-center">
-                    <FaRobot size={14} />
+              <div className="message-wrapper ai-message">
+                <div className="message-content">
+                  <div className="message-avatar">
+                    <FaRobot size={16} />
                   </div>
-                  <div className="bg-gray-100 rounded-lg p-3">
-                    <div className="flex items-center gap-2">
-                      <FaSpinner className="animate-spin" size={14} />
-                      <span className="text-sm text-gray-600">LilyGPT is thinking...</span>
+                  <div className="message-bubble ai-bubble loading-bubble">
+                    <div className="loading-content">
+                      <FaSpinner className="loading-spinner" size={14} />
+                      <span className="loading-text">LilyGPT is thinking...</span>
                     </div>
                   </div>
                 </div>
@@ -157,55 +176,59 @@ export default function LilyGPT() {
           </div>
 
           {/* Suggested Questions */}
-          {messages.length === 1 && (
-            <div className="px-6 py-4 bg-gray-50 border-t">
-              <p className="text-sm text-gray-600 mb-3">Try asking:</p>
-              <div className="flex flex-wrap gap-2">
-                {suggestedQuestions.map((question, index) => (
-                  <button
-                    key={index}
-                    onClick={() => handleSuggestedQuestion(question)}
-                    className="text-xs bg-white border border-gray-200 rounded-full px-3 py-1 hover:bg-gray-100 transition-colors"
-                  >
-                    {question}
-                  </button>
-                ))}
+          <div className="suggestions-section">
+            <div className="suggestions-header">
+              <div className="suggestions-icon">
+                <FaLightbulb size={16} />
               </div>
+              <p className="suggestions-title">Try asking:</p>
             </div>
-          )}
+            <div className="suggestions-grid">
+              {suggestedQuestions.map((question) => (
+                <button
+                  key={question}
+                  onClick={() => handleSuggestedQuestion(question)}
+                  className="suggestion-button"
+                >
+                  {question}
+                </button>
+              ))}
+            </div>
+          </div>
 
           {/* Input Form */}
-          <form onSubmit={sendMessage} className="p-4 border-t bg-gray-50">
-            <div className="flex gap-2">
-              <input
-                type="text"
-                value={inputMessage}
-                onChange={(e) => setInputMessage(e.target.value)}
-                placeholder="Ask me anything about Lily..."
-                className="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-purple-500"
-                disabled={isLoading}
-              />
-              <button
-                type="submit"
-                disabled={!inputMessage.trim() || isLoading}
-                className="bg-purple-500 hover:bg-purple-600 disabled:bg-gray-300 text-white px-4 py-2 rounded-lg transition-colors flex items-center gap-2"
-              >
-                <FaPaperPlane size={14} />
-                Send
-              </button>
-            </div>
-          </form>
+          <div className="chat-input-section">
+            <form onSubmit={sendMessage} className="chat-form">
+              <div className="input-container">
+                <input
+                  type="text"
+                  value={inputMessage}
+                  onChange={(e) => setInputMessage(e.target.value)}
+                  placeholder="Ask me anything about Lily..."
+                  className="message-input"
+                  disabled={isLoading}
+                />
+                <button
+                  type="submit"
+                  disabled={!inputMessage.trim() || isLoading}
+                  className="send-button"
+                >
+                  <FaPaperPlane size={16} />
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
 
         {/* Info Footer */}
-        <div className="text-center mt-6">
-          <p className="text-sm text-gray-500">
+        <div className="info-footer">
+          <p className="info-text">
             Powered by{' '}
             <a 
               href="https://openrouter.ai/openai/gpt-oss-20b:free/api" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-purple-600 hover:text-purple-800 underline"
+              className="info-link"
             >
               OpenAI GPT-OSS-20B
             </a>

@@ -6,10 +6,10 @@ import './Sidebar.css';
 export default function Sidebar({ active }) {
   return (
     <aside className="sidebar">
-      <div>
+      <NavLinks active={active} />
+      <div className="sidebar-controls">
         <LanguageSwitcher />
         <DarkModeToggle />
-        <NavLinks active={active} />
       </div>
     </aside>
   );

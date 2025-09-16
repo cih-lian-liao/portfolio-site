@@ -2,14 +2,37 @@
 .sidebar {
   position: fixed;
   top: 2em;
-  left: calc(50vw - min(40vw, 400px) - 12rem); /* 計算 main-content 左邊界，考慮 max-width 限制 */
-  width: 12rem;
-  height: 100vh;
-  padding: 1.5rem;
+  left: calc(50vw - min(40vw, 400px) - 14rem);
+  width: 14rem;
+  height: calc(100vh - 4em);
+  padding: 0;
   box-shadow: none;
   display: flex;
   flex-direction: column;
   z-index: 1000;
   overflow-y: auto;
   background-color: transparent;
+  gap: 1rem;
+}
+
+.sidebar-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 12rem;
+    left: calc(50vw - min(40vw, 400px) - 12rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 10rem;
+    left: calc(50vw - min(40vw, 400px) - 10rem);
+  }
 }

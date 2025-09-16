@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaDownload, FaEye, FaFilePdf } from 'react-icons/fa';
 import resumePDF from '../../assets/Cihlian-Liao-Resume.pdf';
 
 export default function Resume() {
-  const [showPDF, setShowPDF] = useState(false);
 
   const handleDownload = () => {
     const link = document.createElement('a');
@@ -19,16 +18,20 @@ export default function Resume() {
   };
 
   return (
-    <section id="resume" className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-6">
+    <section id="resume" className="bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-6">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-700 rounded-full mb-6 shadow-lg">
             <FaFilePdf className="text-white text-2xl" />
           </div>
           <h2 className="text-4xl font-semibold text-gray-800 mb-4 tracking-wide">
             Resume
           </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Download or view my complete resume with detailed information about my education, experience, skills, and projects
+          </p>
+          <div className="w-40 h-0.5 bg-gray-400 mx-auto rounded-full mt-6"></div>
         </div>
 
         {/* Action Buttons */}

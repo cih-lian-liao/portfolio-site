@@ -1,46 +1,191 @@
-.beliefs {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  background: #fff;
-  border: 1px solid #e5e5e5;
+/* Beyond Code Section Styles */
+.beliefs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
-.beliefs-title {
-  font-size: 1.75rem;
+@media (min-width: 768px) {
+  .beliefs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.belief-card {
+  position: relative;
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.belief-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-color: #d1d5db;
+}
+
+.belief-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+.belief-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: #f3f4f6;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.belief-card:hover .belief-icon {
+  background: #e5e7eb;
+}
+
+.belief-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d1d5db;
+  transition: color 0.3s ease;
+}
+
+.belief-card:hover .belief-number {
+  color: #9ca3af;
+}
+
+.belief-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.belief-title {
+  font-size: 1.125rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: #111;
-  text-align: center;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
 }
 
-.beliefs-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  list-style: decimal; /* 顯示數字編號 */
-  padding-left: 1.5rem;
+.belief-card:hover .belief-title {
+  color: #111827;
 }
 
-.beliefs-list li {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-left: 3px solid transparent;
-  border-radius: 6px;
-  color: #666;
-  line-height: 1.4;
-  transition: all 0.3s ease;
+.belief-text {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
 }
 
-.beliefs-list li:hover {
-  background: #f9f9f9;
-  border-left: 3px solid #111;
+.belief-card:hover .belief-text {
+  color: #374151;
 }
 
-.beliefs-closing {
-  margin-top: 2rem;
-  font-size: 1.1rem;
+/* Closing Statement */
+.closing-statement {
+  position: relative;
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.closing-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: #f3f4f6;
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+}
+
+.closing-text {
+  font-size: 1.125rem;
+  color: #374151;
+  line-height: 1.6;
   font-weight: 500;
-  text-align: center;
-  color: #444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .beliefs-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .belief-card {
+    border-radius: 0.75rem;
+  }
+  
+  .belief-header {
+    padding: 1rem 1rem 0.75rem 1rem;
+  }
+  
+  .belief-content {
+    padding: 0 1rem 1rem 1rem;
+  }
+  
+  .belief-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .belief-number {
+    font-size: 1.25rem;
+  }
+  
+  .belief-title {
+    font-size: 1rem;
+  }
+  
+  .belief-text {
+    font-size: 0.875rem;
+  }
+  
+  .closing-statement {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+  }
+  
+  .closing-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .closing-text {
+    font-size: 1rem;
+  }
+}
+
+/* Animation for staggered reveal */
+
+.belief-card:nth-child(1) { animation-delay: 0.1s; }
+.belief-card:nth-child(2) { animation-delay: 0.2s; }
+.belief-card:nth-child(3) { animation-delay: 0.3s; }
+.belief-card:nth-child(4) { animation-delay: 0.4s; }
+.belief-card:nth-child(5) { animation-delay: 0.5s; }
+.belief-card:nth-child(6) { animation-delay: 0.6s; }
+.belief-card:nth-child(7) { animation-delay: 0.7s; }
+.belief-card:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

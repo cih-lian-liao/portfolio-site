@@ -36,12 +36,13 @@ function App() {
   }, []);
 
   // ✅ 使用 IntersectionObserver 更新 active section（提前切換 + 底部留緩衝）
+  // 使用 toSorted() 避免直接修改原陣列，符合 React 最佳實踐
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries.filter((e) => e.isIntersecting);
         if (visible.length > 0) {
-          const mostVisible = visible.sort(
+          const mostVisible = visible.toSorted(
             (a, b) => b.intersectionRatio - a.intersectionRatio
           )[0];
           const id = mostVisible.target.id;
