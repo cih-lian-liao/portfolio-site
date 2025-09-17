@@ -6,8 +6,8 @@ const projects = [
     summary:
       "A data-driven web platform that connects adopters with the right pets through intelligent filtering and adoption data analysis.",
     tech: ["Flask", "Python", "Pandas", "HTML", "CSS", "Web Scraping"],
-    demo: "#",
-    repo: "#",
+    demo: "https://pet-finder-idta.onrender.com/",
+    repo: "https://github.com/cih-lian-liao/pet-finder",
     details: [
       "I created Pet Finder to help adopters find the right pet quickly and easily, while also supporting rescue organizations in placing animals more effectively. The platform enables users to filter animals by location, size, breed, age, and gender, making the adoption process both intuitive and personalized.",
       "On the backend, I used Flask to build the web application and employed Python web scraping to collect real adoption listings. Using Pandas, I analyzed adoption trends and predictors such as breed popularity, age impact, and adoption fee structures. The frontend, built with HTML and CSS, was designed to be clean and user-friendly for adopters.",
