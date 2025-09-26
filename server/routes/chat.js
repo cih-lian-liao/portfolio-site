@@ -35,7 +35,7 @@ TECHNICAL SKILLS:
 - Databases: SQL, MySQL, NoSQL, MongoDB
 - AI & UX: OpenAI API, Prompt Engineering, Generative AI for UX Design, AI-Driven User Experience Optimization
 - Languages: English (Fluent), Mandarin Chinese (Native), Korean (Fluent)
-- Tools: Git, GitHub, CI/CD, Testing (Jest, RTL), Vite, Webpack
+- Tools: Git, GitHub, CI/CD, Cursor, Vite, Webpack
 
 EXPERIENCE:
 - Translator, Interpreter & Project Coordinator (2019-2023, Taiwan)

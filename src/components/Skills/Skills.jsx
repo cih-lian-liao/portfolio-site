@@ -19,7 +19,7 @@ export default function Skills() {
     {
       title: "Tools & Technologies",
       skills: [
-        "Testing (Jest, RTL)", "OpenAI API", "Prompt Engineering", 
+        "Cursor", "OpenAI API", "Prompt Engineering", 
         "GitHub Copilot"
       ]
     },
