@@ -138,8 +138,8 @@ const projects = [
       "Chart.js",
       "Axios",
     ],
-    demo: "#",
-    repo: "#",
+    demo: "https://sneat-cihlianliao.vercel.app/",
+    repo: "https://github.com/cih-lian-liao/sneat",
     details: [
       "Sneat is a full-stack analytics dashboard that demonstrates modern web development practices. Built with React 18 and deployed on Vercel, it provides real-time data visualization across multiple business modules including Analytics, CRM, and E-commerce functionality.",
       "The platform features a modular component architecture with 20+ reusable components, responsive design optimized for all devices, and a sophisticated dark/light mode implementation. The backend utilizes Vercel Functions for serverless APIs, MongoDB Atlas for cloud database hosting, and Mongoose for efficient data modeling.",
