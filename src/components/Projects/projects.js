@@ -58,8 +58,8 @@ const projects = [
       "CSS",
       "API Integration",
     ],
-    demo: "#",
-    repo: "#",
+    demo: "https://cih-lian-liao.github.io/splash/",
+    repo: "https://github.com/cih-lian-liao/splash",
     details: [
       "During NEU’s 2024 Hackathon, I collaborated on Flood Map Alert, a web app designed to improve community resilience during extreme weather events. The platform allows users to mark safe or dangerous locations on an interactive flood risk map, helping drivers and residents quickly assess whether their area is safe.",
       "Built with JavaScript, Leaflet.js, and OpenStreetMap, the project combined front-end development with geospatial visualization and third-party API integration. It was completed in just 48 hours as part of a team challenge, where I contributed to both design and implementation.",
