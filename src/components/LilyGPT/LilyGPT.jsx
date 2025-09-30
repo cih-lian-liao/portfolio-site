@@ -92,15 +92,62 @@ export default function LilyGPT() {
   };
 
   const suggestedQuestions = [
-    "What are Lily's technical skills?",
-    "Tell me about her projects",
-    "What's her educational background?",
-    "What kind of internship is she looking for?",
-    "What programming languages does she know?"
+    "What are Lily's strongest technical skills and expertise?",
+    "Tell me about Lily's most impressive projects and achievements",
+    "What makes Lily a unique candidate for software engineering roles?",
+    "What type of internship or role is Lily currently seeking?",
+    "How has Lily's background in translation influenced her approach to technology?",
+    "What are Lily's career goals and interests in software development?"
   ];
 
-  const handleSuggestedQuestion = (question) => {
-    setInputMessage(question);
+  const handleSuggestedQuestion = async (question) => {
+    if (isLoading) return;
+
+    const userMessage = {
+      id: Date.now(),
+      text: question,
+      sender: 'user',
+      timestamp: new Date()
+    };
+
+    setMessages(prev => [...prev, userMessage]);
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: question })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to get response');
+      }
+
+      const data = await response.json();
+      
+      const aiMessage = {
+        id: Date.now() + 1,
+        text: data.response,
+        sender: 'ai',
+        timestamp: new Date()
+      };
+
+      setMessages(prev => [...prev, aiMessage]);
+    } catch (error) {
+      console.error('Error:', error);
+      const errorMessage = {
+        id: Date.now() + 1,
+        text: "Sorry, I'm having trouble connecting right now. Please try again later!",
+        sender: 'ai',
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -189,6 +236,7 @@ export default function LilyGPT() {
                   key={question}
                   onClick={() => handleSuggestedQuestion(question)}
                   className="suggestion-button"
+                  disabled={isLoading}
                 >
                   {question}
                 </button>

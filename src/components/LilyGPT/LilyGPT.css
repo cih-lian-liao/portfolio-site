@@ -231,11 +231,23 @@
   transition: all 0.3s ease;
 }
 
-.suggestion-button:hover {
+.suggestion-button:hover:not(:disabled) {
   background: #f3f4f6;
   border-color: #d1d5db;
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f9fafb;
+  color: #9ca3af;
+}
+
+.suggestion-button:disabled:hover {
+  transform: none;
+  box-shadow: none;
 }
 
 /* Chat Input Section */
