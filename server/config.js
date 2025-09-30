@@ -6,9 +6,7 @@ module.exports = {
   nodeEnv: process.env.NODE_ENV || 'development',
   corsOrigins: process.env.NODE_ENV === 'production' 
     ? [
-        process.env.CORS_ORIGIN || 'https://cih-lian-liao-portfolio-site.com',
-        'https://www.cih-lian-liao-portfolio-site.com',
-        'https://portfolio-site-cih-lian-liao.vercel.app'
+        process.env.CORS_ORIGIN || 'https://portfolio-site-cih-lian-liao.vercel.app'
       ] 
     : ['http://localhost:5173', 'http://localhost:3000', 'http://localhost:4173'],
   openrouterApiKey: process.env.OPENROUTER_API_KEY
