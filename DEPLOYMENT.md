@@ -13,10 +13,10 @@
 2. 點擊 "New Project"
 3. 導入您的 GitHub 倉庫：`cih-lian-liao/portfolio-site`
 4. 配置設置：
-   - **Framework Preset**: Other
+   - **Framework Preset**: Vite
    - **Root Directory**: `/` (根目錄)
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
+   - **Build Command**: `npm run build` (自動檢測)
+   - **Output Directory**: `dist` (自動檢測)
 
 #### 方法二：通過 Vercel CLI
 ```bash
