@@ -99,10 +99,11 @@ DETAILED PROJECT PORTFOLIO:
    - Demo: https://sneat-cihlianliao.vercel.app/
 
 7. Personal Portfolio Website with AI Chatbot (Current Project)
-   - Tech Stack: React, Vite, JavaScript, AI Chatbot API, Vercel
-   - A modern portfolio built with React (Vite) and Vercel, featuring an AI-powered chatbot that allows visitors to interactively learn about skills and projects
-   - Features: Interactive AI chatbot with instant AI-generated responses; modern frontend built with React (Vite); deployed on Vercel for fast, globally accessible serverless hosting
-   - Focus: Interactive experience allowing recruiters and collaborators to directly engage with the chatbot
+   - Tech Stack: React 19, Vite, Express.js, Node.js, OpenAI GPT-3.5 Turbo, OpenRouter API, Tailwind CSS, Vercel
+   - A comprehensive full-stack portfolio website featuring an intelligent AI chatbot (LilyGPT) that provides interactive conversations about my background, skills, and projects
+   - Features: Interactive AI chatbot with 6 pre-configured interview-relevant questions; comprehensive portfolio sections (About, Skills, Projects, Education, Experience, Beyond Code, Resume, Contact); responsive design with mobile-first approach; real-time chat interface with message history; CORS configuration supporting multiple domains; environment-based configuration; automated deployment pipeline
+   - Technical Implementation: React 19 frontend with Vite for optimal performance; Express.js backend with RESTful API endpoints; OpenAI GPT-3.5 Turbo integration via OpenRouter; Tailwind CSS for responsive design; Vercel deployment with GitHub integration
+   - Impact: Provides innovative way for recruiters to interact with portfolio; demonstrates full-stack development and AI integration skills; showcases modern web technologies and responsive design capabilities
 
 CAREER GOALS & INTERESTS:
 - Seeking Summer 2026 Software Engineering Internship
