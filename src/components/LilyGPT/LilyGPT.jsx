@@ -273,14 +273,14 @@ export default function LilyGPT() {
           <p className="info-text">
             Powered by{' '}
             <a 
-              href="https://openrouter.ai/openai/gpt-oss-20b:free/api" 
+              href="https://openrouter.ai/api" 
               target="_blank" 
               rel="noopener noreferrer"
               className="info-link"
             >
-              OpenAI GPT-OSS-20B
+              OpenAI GPT-3.5 Turbo
             </a>
-            {' '}• Information based on Lily's portfolio and resume
+            {' '}via OpenRouter • Information based on Lily's portfolio and resume
           </p>
         </div>
       </div>
