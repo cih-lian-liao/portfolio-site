@@ -16,8 +16,8 @@ export default function About() {
           </div>
           <h2 className="about-title">
             <span className="about-name-tooltip">
-              Cihlian
-              <span className="about-tooltip-text">pronunciation: chi-lian</span>
+              Cih-Lian
+              <span className="about-tooltip-text">pronunciation: Chi-Lian</span>
             </span>
             {" "}
             Lily Liao
@@ -38,7 +38,7 @@ export default function About() {
               <div className="about-content-icon">
                 <span className="text-2xl">👋</span>
               </div>
-              <h3 className="about-content-title">A little bit more about me</h3>
+              <h3 className="about-content-title">A little bit about me</h3>
             </div>
             
             <div className="about-content-text">
