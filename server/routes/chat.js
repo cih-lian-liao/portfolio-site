@@ -66,11 +66,13 @@ DETAILED PROJECT PORTFOLIO:
    - Impact: Helps rescue organizations place animals more effectively and empowers adopters with actionable insights
    - Demo: https://pet-finder-idta.onrender.com/
 
-2. HealthBuddy — A personal health CRM that logs daily metrics and visualizes progress with goal tracking
+2. My Healthcare Buddy — A personal health CRM that logs daily metrics and visualizes progress with goal tracking
    - Tech Stack: Java, Swing, SQLite, JDBC, JFreeChart, CSV Export
    - A desktop health CRM built with Java Swing and SQLite that records daily metrics (weight, BMI, steps, blood pressure, heart rate) and visualizes trends against goals
    - Features: Daily logging for health metrics and habits; goal tracking with charts comparing actual progress vs. targets; time-series visualization using JFreeChart; CSV export for external analysis
    - Architecture: Clean separation between UI and persistence via SQLite/JDBC; seeded demo data for testing
+   - Demo: https://www.youtube.com/watch?v=ikXm90GiwVU
+   - Repo: https://github.com/cih-lian-liao/my-healthcare-buddy
 
 3. Splash — Comprehensive Flood Risk Management Platform
    - Tech Stack: JavaScript ES6+, Leaflet.js, National Weather Service API, HTML5, CSS3, LocalStorage
@@ -84,6 +86,8 @@ DETAILED PROJECT PORTFOLIO:
    - A React (Vite) e-commerce prototype simulating a complete online shopping flow with catalog filtering, dynamic product pages, and a Context API-powered cart system
    - Features: Product catalog with category filtering (wooden toys, stuffed animals); dynamic product detail pages; Context API-powered shopping cart with modal UI; fully responsive design with custom CSS layouts
    - Focus: User experience and scalable architecture for toy e-commerce
+   - Demo: https://funzy-mart.vercel.app/
+   - Repo: https://github.com/cih-lian-liao/funzy-mart
 
 5. Sneat Dashboard Analytics Platform — Full-Stack React Application
    - Tech Stack: React 18, Vite, React Router, Vercel Functions, MongoDB Atlas, Chart.js, Axios

@@ -22,18 +22,18 @@ const projects = [
     ],
   },
   {
-    id: "healthbuddy",
+    id: "my-healthcare-buddy",
     emoji: "🩺",
     title:
-      "HealthBuddy — A personal health CRM that logs daily metrics and visualizes progress with goal tracking",
+      "My Healthcare Buddy — A personal health CRM that logs daily metrics and visualizes progress with goal tracking",
     summary:
       "A desktop health CRM built with Java Swing and SQLite that records daily metrics (weight, BMI, steps, blood pressure, heart rate) and visualizes trends against goals.",
     tech: ["Java", "Swing", "SQLite", "JDBC", "JFreeChart", "CSV Export"],
-    demo: "#",
-    repo: "#",
+    demo: "https://www.youtube.com/watch?v=ikXm90GiwVU",
+    repo: "https://github.com/cih-lian-liao/my-healthcare-buddy",
     details: [
-      "HealthBuddy is a Java Swing desktop app backed by SQLite. It lets users record weight, BMI, steps, blood pressure, heart rate, and daily habits, then visualize time-series trends with JFreeChart and export data to CSV—turning raw logs into actionable insights.",
-      "I built HealthBuddy to practice end-to-end desktop application design—from UX flow and form validation to data modeling and analytics. Users can enter daily health data, review charts by metric and date range, and compare progress against targets (e.g., target weight).",
+      "My Healthcare Buddy is a Java Swing desktop app backed by SQLite. It lets users record weight, BMI, steps, blood pressure, heart rate, and daily habits, then visualize time-series trends with JFreeChart and export data to CSV—turning raw logs into actionable insights.",
+      "I built My Healthcare Buddy to practice end-to-end desktop application design—from UX flow and form validation to data modeling and analytics. Users can enter daily health data, review charts by metric and date range, and compare progress against targets (e.g., target weight).",
       "I architected the app with a clean separation between UI and persistence (SQLite via JDBC), added realistic seeded data for testing, and implemented CSV export to support external analysis and interoperability.",
       "Highlights:",
       "- Daily logging for weight, BMI, steps, blood pressure, heart rate, and habits",
@@ -88,8 +88,8 @@ const projects = [
       "Context API",
       "CSS (Flexbox & Grid)",
     ],
-    demo: "#",
-    repo: "#",
+    demo: "https://funzy-mart.vercel.app/",
+    repo: "https://github.com/cih-lian-liao/funzy-mart",
     details: [
       "I built FunzyMart, a modern toy e-commerce website developed with React (Vite), to simulate the full online shopping experience. The platform was designed with a strong focus on user experience and scalable architecture, making it both engaging for customers and maintainable for developers.",
       "On the homepage, users are greeted with a lively hero section and clear call-to-actions that lead them into the catalog. The product catalog supports category filtering, allowing shoppers to browse items such as wooden toys or stuffed animals with ease. Each product links to a dynamic detail page that displays images, specifications, and an “Add to Cart” option.",
