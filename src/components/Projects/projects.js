@@ -76,27 +76,6 @@ const projects = [
     ],
   },
   {
-    id: "bali-travel-tours",
-    emoji: "🌴",
-    title: "Bali Travel Tours — Responsive Tourism Website",
-    summary:
-      "A modern responsive tourism website concept featuring immersive visuals, interactive navigation, and scroll-based storytelling.",
-    tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Animations"],
-    demo: "#",
-    repo: "#",
-    details: [
-      "I designed and developed a modern, responsive website for a Bali travel agency concept. The site highlights various travel packages (Regular, Premium, Event), destinations (Ocean, Jungle, Island tours), and seasonal promotions with a strong visual emphasis through full-screen video backgrounds, hover-activated menus, and interactive text animations.",
-      "This project focused on delivering an engaging, visually rich experience, tailored to the travel industry, while practicing advanced front-end techniques for layout, animation, and interactivity.",
-      "Highlights:",
-      "- Immersive Hero Section with looping video background and scrolling text banners",
-      "- Interactive navigation with hover-triggered dropdown cards for packages and destinations",
-      "- Dynamic tour sections showcasing itineraries, pricing, and booking calls-to-action",
-      "- Scroll-based animations (JavaScript-driven parallax) for storytelling",
-      "- Responsive design optimized for both desktop and mobile",
-      "- Strengthened skills in HTML5, CSS3 (animations, transitions, responsive layouts), and vanilla JavaScript for interactive UI",
-    ],
-  },
-  {
     id: "funzymart",
     emoji: "🧸",
     title: "FunzyMart — A Modern React E-commerce Website",

@@ -79,26 +79,20 @@ DETAILED PROJECT PORTFOLIO:
    - Highlights: Mobile-first responsive design; GitHub Pages deployment; sophisticated data management with input validation
    - Demo: https://cih-lian-liao.github.io/splash/
 
-4. Bali Travel Tours — Responsive Tourism Website
-   - Tech Stack: HTML5, CSS3, JavaScript, Responsive Design, Animations
-   - A modern responsive tourism website concept featuring immersive visuals, interactive navigation, and scroll-based storytelling
-   - Features: Immersive hero section with looping video background; interactive navigation with hover-triggered dropdown cards; dynamic tour sections; scroll-based animations (JavaScript-driven parallax)
-   - Focus: Engaging, visually rich experience tailored to the travel industry
-
-5. FunzyMart — A Modern React E-commerce Website
+4. FunzyMart — A Modern React E-commerce Website
    - Tech Stack: React, Vite, React Router, Context API, CSS (Flexbox & Grid)
    - A React (Vite) e-commerce prototype simulating a complete online shopping flow with catalog filtering, dynamic product pages, and a Context API-powered cart system
    - Features: Product catalog with category filtering (wooden toys, stuffed animals); dynamic product detail pages; Context API-powered shopping cart with modal UI; fully responsive design with custom CSS layouts
    - Focus: User experience and scalable architecture for toy e-commerce
 
-6. Sneat Dashboard Analytics Platform — Full-Stack React Application
+5. Sneat Dashboard Analytics Platform — Full-Stack React Application
    - Tech Stack: React 18, Vite, React Router, Vercel Functions, MongoDB Atlas, Chart.js, Axios
    - A comprehensive analytics dashboard built with React 18 and Vercel Functions, providing real-time data visualization across Analytics, CRM, and E-commerce modules
    - Features: 95+ Lighthouse score; dark/light mode; serverless backend with MongoDB Atlas; 20+ reusable components; advanced data visualization using Chart.js
    - Highlights: Full-stack architecture; performance optimization with code splitting and lazy loading; modern deployment pipeline
    - Demo: https://sneat-cihlianliao.vercel.app/
 
-7. Personal Portfolio Website with AI Chatbot (Current Project)
+6. Personal Portfolio Website with AI Chatbot (Current Project)
    - Tech Stack: React 19, Vite, Express.js, Node.js, OpenAI GPT-3.5 Turbo, OpenRouter API, Tailwind CSS, Vercel
    - A comprehensive full-stack portfolio website featuring an intelligent AI chatbot (LilyGPT) that provides interactive conversations about my background, skills, and projects
    - Features: Interactive AI chatbot with 6 pre-configured interview-relevant questions; comprehensive portfolio sections (About, Skills, Projects, Education, Experience, Beyond Code, Resume, Contact); responsive design with mobile-first approach; real-time chat interface with message history; CORS configuration supporting multiple domains; environment-based configuration; automated deployment pipeline
