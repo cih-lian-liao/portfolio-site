@@ -273,7 +273,7 @@ export default function LilyGPT() {
           <p className="info-text">
             Powered by{' '}
             <a 
-              href="https://openrouter.ai/api" 
+              href="https://openrouter.ai/openai/gpt-3.5-turbo" 
               target="_blank" 
               rel="noopener noreferrer"
               className="info-link"
