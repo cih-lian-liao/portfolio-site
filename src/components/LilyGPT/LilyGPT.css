@@ -4,10 +4,9 @@
   background: white;
   border-radius: 2rem;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-  transition: all 0.5s ease-in-out;
 }
+
+
 
 .chat-container:hover {
   transform: translateY(-4px);
@@ -130,8 +129,9 @@
   background: white;
   color: #1f2937;
   border: 1px solid #e5e7eb;
-  border-bottom-left-radius: 0.5rem;
 }
+
+
 
 .message-text {
   font-size: 0.95rem;
