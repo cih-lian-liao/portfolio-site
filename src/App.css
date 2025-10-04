@@ -97,12 +97,13 @@ section {
 
 /* 全域選取文字樣式 */
 ::selection {
-  background-color: rgba(255, 255, 0, 0.938); /* 非常淺的灰色背景 */
-  color: rgb(0, 0, 0);           /* 保持原本文字顏色 */
-  font-weight: 700;
+  background-color: #1f2937; /* 深灰色背景 */
+  color: white;              /* 白色文字 */
+  font-weight: 700;          /* 粗體 */
 }
 /* 全域選取文字樣式 適配 Firefox（Firefox 需要 ::-moz-selection） */
 ::-moz-selection {
-  background-color: #f2f2f2;
-  color: inherit;
+  background-color: #1f2937; /* 深灰色背景 */
+  color: white;              /* 白色文字 */
+  font-weight: 700;          /* 粗體 */
 }
