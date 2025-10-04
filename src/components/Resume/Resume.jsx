@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaDownload, FaEye, FaFilePdf } from 'react-icons/fa';
-import resumePDF from '../../assets/Cihlian-Liao-Resume.pdf';
+import resumePDF from '../../assets/Resume of Cih-Lian Liao.pdf';
 import './Resume.css';
 
 export default function Resume() {
@@ -8,7 +8,7 @@ export default function Resume() {
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = resumePDF;
-    link.download = 'Cihlian-Liao-Resume.pdf';
+    link.download = 'Resume of Cih-Lian Liao.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
