@@ -20,7 +20,7 @@ export default function About() {
               <span className="about-tooltip-text">pronunciation: Chi-Lian</span>
             </span>
             {" "}
-            Lily Liao
+            Liao (Lily)
           </h2>
           <div className="about-tagline-container">
             <span className="about-tagline-item">Front-End Developer</span>
