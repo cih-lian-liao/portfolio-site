@@ -4,24 +4,55 @@ import "./Experience.css";
 export default function Experience() {
   const experiences = [
     {
-      title: "Translator & Interpreter (Korean ↔ Chinese)",
-      company: "Taiwan",
-      date: "2019 – 2023",
-      icon: "🌐",
+      title: "Software Engineer Intern – Frontend Development",
+      company: "WeWave",
+      location: "Fremont, CA",
+      date: "Jun 2025 – Aug 2025",
+      icon: "💻",
       paragraph:
-        "I worked as a professional translator and interpreter, specializing in Korean–Chinese interpretation for business meetings, media productions, and international events. These experiences sharpened my ability to communicate clearly across cultures, coordinate with multinational teams, and adapt quickly in high-pressure environments.",
+        "At WeWave, I contributed to the development of a financial analytics dashboard used by enterprise clients to visualize large-scale transaction data. The main challenge was improving rendering efficiency and responsiveness when dealing with significantly larger datasets.",
+      details: [
+        "I optimized the React architecture by restructuring component hierarchies, implementing lazy loading, and fine-tuning Recharts rendering logic to support 10× more data without sacrificing interactivity.",
+        "Additionally, I enhanced product analytics by integrating Google Analytics 4 (GA4) and setting up A/B usability experiments, which led to a 10% reduction in user drop-offs through data-driven UI improvements.",
+        "To ensure a seamless checkout experience, I implemented and tested Stripe Checkout flows using the React-Stripe.js library and added reCAPTCHA for advanced validation and bot prevention."
+      ],
+      techStack: "React, MUI, Recharts, React-Stripe.js, GA4, reCAPTCHA, JavaScript (ES6+)",
       highlight:
-        "Clear communication and adaptability became the foundation of my career shift into technology.",
+        "These optimizations improved payment reliability and cross-browser consistency across the platform.",
     },
     {
-      title: "Platform Operations & Project Coordinator",
-      company: "Taiwan Chingu",
-      date: "2021 – 2023",
-      icon: "⚙️",
+      title: "Software Engineer Intern – Forum & E-Commerce Platform",
+      company: "Racing Pigeon Alliance",
+      location: "Taiwan",
+      date: "Jun 2024 – Aug 2024",
+      icon: "🌐",
       paragraph:
-        "In addition to language services, I helped manage a translation talent platform. My role went beyond daily operations—I collaborated closely with engineers, providing usability feedback that improved workflows and user experience. This was my first hands-on exposure to the impact of technology on connecting people.",
+        "During my internship at Racing Pigeon Alliance, I worked on transforming a legacy PHP/jQuery web application into a modern React-based architecture. The goal was to improve performance, maintainability, and user experience for an active online community.",
+      details: [
+        "I migrated the platform to React (ES6+), modularized UI components for better reusability, and integrated Facebook and LINE APIs to support social login and content sharing.",
+        "These changes modernized the codebase, simplified future maintenance, and increased user registrations by 20%.",
+        "To better serve the platform's primarily senior audience, I redesigned the interface with accessibility and readability in mind."
+      ],
+      techStack: "React (ES6+), HTML5, CSS3, JavaScript, Facebook & LINE APIs",
       highlight:
-        "This experience sparked my conviction that technology has the power to connect and empower communities at scale.",
+        "This included optimizing contrast ratios, enlarging interactive elements, and ensuring proper semantic structure for screen readers—raising post-launch satisfaction scores by approximately 15%.",
+    },
+    {
+      title: "Product & Project Manager – Interpretation Talent Platform",
+      company: "Taiwan Chingu",
+      location: "Taiwan",
+      date: "Full-time, 2019 – 2023",
+      icon: "🌏",
+      paragraph:
+        "Before transitioning fully into software engineering, I worked as a Product and Project Manager at Taiwan Chingu, a multilingual interpretation and translation platform connecting global clients with professional translators. My role bridged both product strategy and technical implementation.",
+      details: [
+        "I collaborated closely with engineers and designers to rebuild the platform's core translation workflow using modern web technologies.",
+        "Through iterative design testing, user feedback sessions, and front-end refactoring in React and JavaScript, we improved platform navigation, UI responsiveness, and overall accessibility—reducing support tickets by about 30%.",
+        "In parallel, I led Agile sprint planning and managed multiple client-facing interpretation projects, ensuring feature releases were delivered on schedule and aligned with business goals."
+      ],
+      techStack: "React, JavaScript (ES6+), Figma, Agile / Scrum",
+      highlight:
+        "This experience helped shape my product mindset and deepened my understanding of how design and engineering work together to enhance user experience.",
     },
   ];
 
@@ -45,7 +76,7 @@ export default function Experience() {
         {/* Experience Cards */}
         <div className="experience-grid">
           {experiences.map((exp, index) => (
-            <div key={index} className="experience-item">
+            <div key={exp.company} className="experience-item">
               {/* Experience Card */}
               <div className="experience-card">
                 <div className="experience-header">
@@ -56,6 +87,7 @@ export default function Experience() {
                     <h3 className="experience-title">{exp.title}</h3>
                     <div className="experience-meta">
                       <span className="company">{exp.company}</span>
+                      <span className="location">{exp.location}</span>
                       <span className="date">{exp.date}</span>
                     </div>
                   </div>
@@ -63,6 +95,27 @@ export default function Experience() {
 
                 <div className="experience-content">
                   <p className="experience-description">{exp.paragraph}</p>
+                  
+                  {exp.details && (
+                    <div className="experience-details">
+                      {exp.details.map((detail, detailIndex) => (
+                        <p key={`${exp.company}-detail-${detailIndex}`} className="detail-item">
+                          {detail}
+                        </p>
+                      ))}
+                    </div>
+                  )}
+                  
+                  {exp.techStack && (
+                    <div className="tech-stack">
+                      <div className="tech-stack-label">
+                        <span className="text-sm font-medium text-gray-600">Tech Stack:</span>
+                      </div>
+                      <div className="tech-stack-items">
+                        {exp.techStack}
+                      </div>
+                    </div>
+                  )}
                   
                   <div className="experience-highlight">
                     <div className="highlight-icon">
