@@ -230,6 +230,9 @@
   cursor: pointer;
   transition: all 0.3s ease;
   line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .suggestion-button:hover:not(:disabled) {
