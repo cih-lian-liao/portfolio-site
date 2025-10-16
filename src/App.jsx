@@ -14,13 +14,13 @@ import "./App.css";
 
 const SECTIONS = [
   "about",
-  "skills",
-  "projects",
+  "lily-gpt",
   "education",
+  "skills",
   "experience",
+  "projects",
   "beyond-code",
   "resume",
-  "lily-gpt",
   "contact",
 ];
 
@@ -88,26 +88,26 @@ function App() {
         <section id="about">
           <About />
         </section>
-        <section id="skills">
-          <Skills />
-        </section>
-        <section id="projects">
-          <Projects />
+        <section id="lily-gpt">
+          <LilyGPT />
         </section>
         <section id="education">
           <Education />
         </section>
+        <section id="skills">
+          <Skills />
+        </section>
         <section id="experience">
           <Experience />
+        </section>
+        <section id="projects">
+          <Projects />
         </section>
         <section id="beyond-code">
           <BeyondCode />
         </section>
         <section id="resume">
           <Resume />
-        </section>
-        <section id="lily-gpt">
-          <LilyGPT />
         </section>
         <section id="contact">
           <Contact />
