@@ -25,6 +25,24 @@ export default function LilyGPT() {
     }, 100);
   };
 
+  const scrollToLastAIMessage = () => {
+    setTimeout(() => {
+      if (chatMessagesRef.current) {
+        // Find the last AI message element
+        const aiMessages = chatMessagesRef.current.querySelectorAll('.message.ai');
+        if (aiMessages.length > 0) {
+          const lastAIMessage = aiMessages[aiMessages.length - 1];
+          // Scroll to the top of the last AI message
+          lastAIMessage.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start',
+            inline: 'nearest'
+          });
+        }
+      }
+    }, 100);
+  };
+
   useEffect(() => {
     // 只在有新消息時滾動，並且延遲一點時間確保 DOM 更新完成
     if (messages.length > 1) {
@@ -32,10 +50,16 @@ export default function LilyGPT() {
     }
   }, [messages]);
 
-  // 當加載狀態改變時也滾動
+  // 當加載狀態改變時滾動到最後一個 AI 消息的開始位置
   useEffect(() => {
     if (!isLoading && messages.length > 1) {
-      scrollToBottom();
+      // 檢查最後一條消息是否是 AI 消息
+      const lastMessage = messages[messages.length - 1];
+      if (lastMessage.sender === 'ai') {
+        scrollToLastAIMessage();
+      } else {
+        scrollToBottom();
+      }
     }
   }, [isLoading]);
 
