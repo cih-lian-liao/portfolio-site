@@ -44,6 +44,9 @@ export default function LilyGPT() {
     
     if (!inputMessage.trim() || isLoading) return;
 
+    // Activate lightbulb effect
+    setIsLightbulbActive(true);
+
     const userMessage = {
       id: Date.now(),
       text: inputMessage,
@@ -89,6 +92,10 @@ export default function LilyGPT() {
       setMessages(prev => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
+      // Reset lightbulb after a short delay
+      setTimeout(() => {
+        setIsLightbulbActive(false);
+      }, 1000);
     }
   };
 
