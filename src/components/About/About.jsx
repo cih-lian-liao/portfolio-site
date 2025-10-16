@@ -43,16 +43,22 @@ export default function About() {
             
             <div className="about-content-text">
               <p>
-                I'm currently pursuing a Master's degree in Information Systems at
-                Northeastern University, Seattle. With a deep passion for technology
-                and design, I aim to build web applications that are not only
-                functional but also beautiful and user-centered.
+                I'm a Software Engineer currently pursuing a Master's degree in Information Systems at
+                Northeastern University, Seattle. With hands-on experience in frontend development
+                at companies like WeWave and Racing Pigeon Alliance, I specialize in building
+                high-performance React applications and optimizing user experiences.
               </p>
               <p>
-                I have a unique background in language and translation, which helps me
-                communicate clearly and build inclusive digital experiences. I'm
-                especially interested in combining front-end development with emerging
-                AI technologies to solve meaningful problems.
+                My unique background spans from product management in Taiwan's interpretation industry
+                to full-stack development, giving me a holistic understanding of both technical
+                implementation and user needs. I'm passionate about integrating AI technologies
+                into web applications and have successfully built custom AI chatbots and
+                data-driven analytics platforms.
+              </p>
+              <p>
+                I'm authorized to work in the U.S. without sponsorship and am always excited
+                to collaborate on projects that combine technical excellence with meaningful
+                user impact.
               </p>
             </div>
           </div>
