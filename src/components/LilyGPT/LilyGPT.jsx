@@ -92,12 +92,12 @@ export default function LilyGPT() {
   };
 
   const suggestedQuestions = [
-    "What are Lily's strongest technical skills and expertise?",
-    "Tell me about Lily's most impressive projects and achievements",
-    "What makes Lily a unique candidate for software engineering roles?",
-    "What type of internship or role is Lily currently seeking?",
-    "How has Lily's background in translation influenced her approach to technology?",
-    "What are Lily's career goals and interests in software development?"
+    "What specific achievements and quantified results has Lily delivered in her recent roles?",
+    "How has Lily's transition from product management to software engineering shaped her approach?",
+    "What makes Lily stand out as a frontend developer and what are her strongest technical skills?",
+    "Can you tell me about Lily's experience with AI integration and modern web technologies?",
+    "How does Lily's multilingual background and cultural sensitivity benefit technical teams?",
+    "What type of software engineering internship is Lily seeking for Summer 2026?"
   ];
 
   const handleSuggestedQuestion = async (question) => {
