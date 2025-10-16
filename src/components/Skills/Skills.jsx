@@ -3,31 +3,36 @@ import "./Skills.css";
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Frontend Development",
+      title: "Programming Languages",
       skills: [
-        "HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "React Router",
-        "Redux / Context API", "Tailwind CSS", "Material UI", "Vite / Webpack"
+        "JavaScript (ES6+)", "TypeScript", "Java", "Python"
       ]
     },
     {
-      title: "Backend & Database",
+      title: "Web Development",
       skills: [
-        "Node.js + Express.js", "Java", "Python", "MySQL", "MongoDB",
-        "REST / GraphQL API", "Cloud Deployment", "Git / GitHub", "CI/CD"
+        "React", "Vite", "HTML5", "CSS3", "Tailwind CSS", "MUI", 
+        "Figma", "Node.js", "Express.js", "RESTful APIs", "Django"
       ]
     },
     {
-      title: "Tools & Technologies",
+      title: "Databases & Tools",
       skills: [
-        "Cursor", "OpenAI API", "Prompt Engineering", 
-        "GitHub Copilot"
+        "SQL", "MySQL", "NoSQL (MongoDB)", "Git", "GitHub", 
+        "Vercel", "Docker"
       ]
     },
     {
-      title: "Languages & Soft Skills",
+      title: "AI Integration",
       skills: [
-        "Mandarin Chinese", "Korean", "English", "Communication", 
-        "Team Collaboration", "Problem Solving", "Adaptability", "Leadership"
+        "OpenRouter API (GPT-3.5/4)", "Prompt Engineering"
+      ]
+    },
+    {
+      title: "Soft Skills",
+      skills: [
+        "Communication", "Team Collaboration", "Problem Solving", 
+        "Adaptability", "Leadership"
       ]
     }
   ];
