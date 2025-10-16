@@ -92,12 +92,12 @@ export default function LilyGPT() {
   };
 
   const suggestedQuestions = [
-    "What specific achievements and quantified results has Lily delivered in her recent roles?",
-    "How has Lily's transition from product management to software engineering shaped her approach?",
+    "Can you give me an overview of Cih-Lian Liao's background and what makes her unique?",
     "What makes Lily stand out as a frontend developer and what are her strongest technical skills?",
-    "Can you tell me about Lily's experience with AI integration and modern web technologies?",
-    "How does Lily's multilingual background and cultural sensitivity benefit technical teams?",
-    "What type of software engineering internship is Lily seeking for Summer 2026?"
+    "What type of software engineering internship is Lily seeking for Summer 2026?",
+    "What is Cih-Lian's professional experience and how has it shaped her approach to software development?",
+    "What specific achievements and quantified results has Lily delivered in her recent roles?",
+    "What kinds of projects has Cih-Lian worked on and what technologies did she use?"
   ];
 
   const handleSuggestedQuestion = async (question) => {
