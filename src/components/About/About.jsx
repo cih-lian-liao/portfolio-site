@@ -52,13 +52,8 @@ export default function About() {
                 My unique background spans from product management in Taiwan's interpretation industry
                 to full-stack development, giving me a holistic understanding of both technical
                 implementation and user needs. I'm passionate about integrating AI technologies
-                into web applications and have successfully built custom AI chatbots and
-                data-driven analytics platforms.
-              </p>
-              <p>
-                I'm authorized to work in the U.S. without sponsorship and am always excited
-                to collaborate on projects that combine technical excellence with meaningful
-                user impact.
+                into web applications and am always excited to collaborate on projects that combine
+                technical excellence with meaningful user impact.
               </p>
             </div>
           </div>
