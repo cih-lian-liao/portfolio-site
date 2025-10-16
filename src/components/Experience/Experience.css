@@ -59,7 +59,7 @@
 }
 
 .experience-title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #1f2937;
   margin: 0 0 0.75rem 0;
@@ -95,8 +95,42 @@
 .experience-description {
   color: #4b5563;
   line-height: 1.7;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-size: 1rem;
+}
+
+.experience-details {
+  margin-bottom: 1.5rem;
+}
+
+.detail-item {
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.tech-stack {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.tech-stack-label {
+  margin-bottom: 0.5rem;
+}
+
+.tech-stack-items {
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 .experience-highlight {
@@ -179,7 +213,15 @@
   }
   
   .experience-title {
-    font-size: 1.125rem;
+    font-size: 1rem;
+  }
+  
+  .detail-item {
+    font-size: 0.9rem;
+  }
+  
+  .tech-stack-items {
+    font-size: 0.8rem;
   }
 }
 
@@ -205,7 +247,7 @@
   }
   
   .experience-title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
   
   .company {
@@ -219,6 +261,14 @@
   .experience-description {
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
+  }
+  
+  .detail-item {
+    font-size: 0.95rem;
+  }
+  
+  .tech-stack-items {
+    font-size: 0.85rem;
   }
   
   .experience-highlight {
@@ -264,7 +314,7 @@
   }
   
   .experience-title {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
   
   .experience-meta {
@@ -282,6 +332,16 @@
   
   .experience-description {
     font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .detail-item {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .tech-stack-items {
+    font-size: 0.8rem;
     text-align: center;
   }
   
