@@ -2,13 +2,13 @@ import "./NavLinks.css";
 
 const sections = [
   { id: "about", label: "About", icon: "👋" },
-  { id: "skills", label: "Skills", icon: "⚡" },
-  { id: "projects", label: "Projects", icon: "🚀" },
+  { id: "lily-gpt", label: "LilyGPT", icon: "🤖" },
   { id: "education", label: "Education", icon: "🎓" },
+  { id: "skills", label: "Skills", icon: "⚡" },
   { id: "experience", label: "Experience", icon: "💼" },
+  { id: "projects", label: "Projects", icon: "🚀" },
   { id: "beyond-code", label: "Beyond Code", icon: "💭" },
   { id: "resume", label: "Resume", icon: "📄" },
-  { id: "lily-gpt", label: "LilyGPT", icon: "🤖" },
   { id: "contact", label: "Contact", icon: "📩" },
 ];
 
