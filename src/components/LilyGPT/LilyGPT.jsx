@@ -13,6 +13,7 @@ export default function LilyGPT() {
   ]);
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isLightbulbActive, setIsLightbulbActive] = useState(false);
   const messagesEndRef = useRef(null);
   const chatMessagesRef = useRef(null);
 
@@ -103,6 +104,9 @@ export default function LilyGPT() {
   const handleSuggestedQuestion = async (question) => {
     if (isLoading) return;
 
+    // Activate lightbulb effect
+    setIsLightbulbActive(true);
+    
     const userMessage = {
       id: Date.now(),
       text: question,
@@ -147,6 +151,10 @@ export default function LilyGPT() {
       setMessages(prev => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
+      // Reset lightbulb after a short delay
+      setTimeout(() => {
+        setIsLightbulbActive(false);
+      }, 1000);
     }
   };
 
@@ -225,7 +233,7 @@ export default function LilyGPT() {
           {/* Suggested Questions */}
           <div className="suggestions-section">
             <div className="suggestions-header">
-              <div className="suggestions-icon">
+              <div className={`suggestions-icon ${isLightbulbActive ? 'active' : ''}`}>
                 <FaLightbulb size={16} />
               </div>
               <p className="suggestions-title">Try asking:</p>

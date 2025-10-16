@@ -204,6 +204,14 @@
   background: #f3f4f6;
   border-radius: 0.5rem;
   color: #6b7280;
+  transition: all 0.3s ease;
+}
+
+.suggestions-icon.active {
+  background: #fef3c7;
+  color: #f59e0b;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+  transform: scale(1.1);
 }
 
 .suggestions-title {
