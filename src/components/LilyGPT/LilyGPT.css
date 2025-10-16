@@ -223,12 +223,13 @@
   background: white;
   border: 1px solid #e5e7eb;
   border-radius: 1rem;
-  padding: 0.75rem 1rem;
+  padding: 1rem 1rem;
   font-size: 0.875rem;
   color: #374151;
   text-align: left;
   cursor: pointer;
   transition: all 0.3s ease;
+  line-height: 1.5;
 }
 
 .suggestion-button:hover:not(:disabled) {
@@ -426,8 +427,9 @@
   }
   
   .suggestion-button {
-    padding: 0.625rem 0.875rem;
+    padding: 0.875rem 0.875rem;
     font-size: 0.8rem;
+    line-height: 1.5;
   }
   
   .chat-input-section {
@@ -526,8 +528,9 @@
   }
   
   .suggestion-button {
-    padding: 0.5rem 0.75rem;
+    padding: 0.75rem 0.75rem;
     font-size: 0.75rem;
+    line-height: 1.5;
   }
   
   .chat-input-section {
